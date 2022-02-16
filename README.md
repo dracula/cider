@@ -21,3 +21,4 @@
 ## License
 
 [MIT License](./LICENSE)
+Designed by [Monochromish](https://github.com/Monochromish)
