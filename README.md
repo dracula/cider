@@ -18,7 +18,8 @@
 5. Click on the `Ok` button.
 6. Select the Theme and It should be applied.
 
-## License
+## License and Credits
 
 [MIT License](./LICENSE)
+<br>
 Designed by [Monochromish](https://github.com/Monochromish)
