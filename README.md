@@ -2,6 +2,8 @@
 
 > A clean theme for [Cider Music](https://cider.sh).
 
+![Screenshot](./Screenshot.png)
+
 ## How to install
 ### Using `Install` Button
 1. Go to Cider Music Settings.
@@ -22,4 +24,4 @@
 
 [MIT License](./LICENSE)
 <br>
-Designed by [Monochromish](https://github.com/Monochromish)
+Designed by [Monochromish](https://github.com/Monochromish). For more information, refer to [Team](./TEAM.md)
