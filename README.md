@@ -2,7 +2,7 @@
 
 > A clean theme for [Cider Music](https://cider.sh).
 
-![Screenshot](./Screenshot.png)
+![Screenshot](https://raw.githubusercontent.com/dracula/Dracula-Cider-Music-Theme/main/Screenshot.png)
 
 ## How to install
 ### Using `Install` Button
