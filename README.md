@@ -2,7 +2,7 @@
 
 > A clean theme for [Cider Music](https://cider.sh).
 
-![Screenshot](https://user-images.githubusercontent.com/79590499/154442350-fefbbe03-7c71-410b-a249-9ca31a282790.png)
+![Screenshot](https://user-images.githubusercontent.com/79590499/154614683-b127d68d-a661-4502-91df-e24114e85775.png)
 
 ## How to install
 ### Using `Install` Button
