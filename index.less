@@ -1,5 +1,5 @@
-:root{
-    --keyColor: #ff79c6;
+:root {
+	--keyColor: #ff79c6;
 }
 div#app {
 	--color1: #282a36;
@@ -25,5 +25,15 @@ div#app {
 		.app-chrome {
 			z-index: 1;
 		}
+	}
+}
+
+.app-chrome .app-chrome-item > .app-mainmenu {
+	background-image: url('Cider_with_text.svg');
+	background-repeat: no-repeat;
+
+	&.active {
+		background-image: url('Cider_with_text.svg');
+		background-repeat: no-repeat;
 	}
 }
