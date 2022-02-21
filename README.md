@@ -1,27 +1,17 @@
-# Dracula Theme for [Cider Music](https://cider.sh)
+# Dracula for [Cider](https://cider.sh)
 
-> A clean theme for [Cider Music](https://cider.sh).
+> A dark theme for [Cider](https://cider.sh).
 
-![Screenshot](https://user-images.githubusercontent.com/79590499/154614683-b127d68d-a661-4502-91df-e24114e85775.png)
+![Screenshot](./screenshot.png)
 
-## How to install
-### Using `Install` Button
-1. Go to Cider Music Settings.
-2. Click on the `Explore GitHub Themes` button in the Theme section.
-3. Look for `Dracula Theme for Cider Music` and click on it.
-4. Click on the `Install` button and select the theme (if you have to). The theme should be applied.
+## Install
 
+All instructions can be found at [draculatheme.com/cider](https://draculatheme.com/cider).
 
-### Using Github URL
-1. Go to Cider Music Settings.
-2. Click on the `Explore GitHub Themes` button in the Theme section.
-3. Click on the `Install from GitHub URL`
-4. Copy paste the link to this Github Repository in the Text Box.
-5. Click on the `Ok` button.
-6. Select the Theme and It should be applied.
+## Team
 
-## License and Credits
+This theme is maintained by [Monochromish](https://github.com/Monochromish) and these [awesome contributors](https://github.com/dracula/cider/graphs/contributors).
+
+## License
 
 [MIT License](./LICENSE)
-<br>
-Designed by [Monochromish](https://github.com/Monochromish). For more information, refer to [Team](./TEAM.md)
