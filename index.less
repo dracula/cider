@@ -1,5 +1,7 @@
 :root {
 	--keyColor: #ff79c6;
+	--sidebarColor: #282a36;
+	--sidebarColorMix: #282a36;
 }
 div#app {
 	--color1: #282a36;
@@ -8,10 +10,10 @@ div#app {
 	--bgWidth: 0px;
 	--bgHeight: 0px;
 	--chromeHeight: 55px;
-	--keyColor: #ff79c6;
+	--keyColor: #f06998;
 	width: 100%;
 	height: 100%;
-	background: var(--color1);
+	background: #282a36;
 	color: white;
 	user-select: none;
 	margin: 0 auto;
@@ -26,15 +28,133 @@ div#app {
 			z-index: 1;
 		}
 	}
+
+	button:hover {
+		.svg-icon {
+			--color: var(--keyColor);
+		}
+	}
+
+	.playback-button--small:hover {
+		filter: invert(72%) sepia(39%) saturate(2162%) hue-rotate(288deg)
+			brightness(99%) contrast(107%);
+	}
+
+	.playback-button:hover {
+		filter: invert(72%) sepia(39%) saturate(2162%) hue-rotate(288deg)
+			brightness(99%) contrast(107%);
+	}
+
+	.playback-button.previous {
+		background-size: 100%;
+		background-position: center;
+		height: 50px;
+		width: 50px;
+	}
+
+	.playback-button.pause {
+		background-size: 100%;
+		background-position: center;
+		height: 50px;
+		width: 50px;
+	}
+
+	.playback-button.next {
+		background-size: 100%;
+		background-position: center;
+		height: 50px;
+		width: 50px;
+	}
+
+	.md-btn:hover {
+		color: var(--keyColor);
+	}
+
+	.app-sidebar-footer {
+		border: 0px;
+	}
+
+	.md-btn.md-btn-primary {
+		background: var(--keyColor);
+		color: white;
+	}
+
+	.app-chrome {
+		.app-chrome-item > .app-mainmenu {
+			background: url(./Assets/logo.svg);
+		}
+	}
+
+	.usermenu-item:hover {
+		background: var(--keyColor);
+	}
+
+	// Shout out to Amaru8 for the sleek tabs on settings
+
+	.nav.nav-pills.nav-fill {
+		background-color: transparent;
+	}
+	.nav-pills:after {
+		content: none;
+	}
+	.nav-link.active {
+		color: var(--keyColor);
+		box-shadow: none;
+	}
+	.nav-link::after {
+		border-radius: 0;
+		inset-block-end: -5px;
+		inset-inline: 100%;
+		border-bottom: 2px solid var(--keyColor);
+		transition: inset-inline 1s var(--appleEase), display 1s var(--appleEase);
+	}
+	.nav-link:hover {
+		box-shadow: none;
+		color: var(--keyColor);
+		&::after {
+			background: transparent;
+			border-bottom: 2px solid var(--keyColor);
+			inset-inline: 30%;
+			transition: inset-inline 0.5s var(--appleEase);
+		}
+	}
+	.nav-link.active::after {
+		background: transparent;
+		border-bottom: 2px solid var(--keyColor);
+		inset-inline: 10%;
+	}
 }
 
-.app-chrome .app-chrome-item > .app-mainmenu {
-	background-image: url("cider_with_text.svg");
-	background-repeat: no-repeat;
+#app.macosemu {
+	.app-chrome {
+		.app-chrome-item > .window-controls-macos {
+			div.close {
+				background-color: #ff5555;
+				width: 12px;
+				height: 12px;
+			}
+			div.minimize {
+				background-color: #bd93f9;
+				width: 12px;
+				height: 12px;
+			}
+			div.minmax {
+				background-color: #f1fa8c;
+				width: 12px;
+				height: 12px;
+			}
+		}
+	}
+}
 
-    &.active {
-		background-image: url("cider_with_text.svg");
-		background-repeat: no-repeat;
-    }
+#app.twopanel
+	.app-chrome:not(.chrome-bottom)
+	.app-chrome--center
+	.top-nav-group
+	.app-sidebar-item:before {
+	background: var(--keyColor);
+}
 
+#app.twopanel .app-chrome.chrome-bottom {
+	background: none !important;
 }
