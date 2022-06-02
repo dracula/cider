@@ -2,7 +2,7 @@
 
 > A dark theme for [Cider](https://cider.sh).
 
-![Screenshot](https://raw.githubusercontent.com/dracula/cider/main/screenshot.png)
+![Screenshot](./Preview.png)
 
 ## Install
 
