@@ -10,7 +10,7 @@ div#app {
 	--bgWidth: 0px;
 	--bgHeight: 0px;
 	--chromeHeight: 55px;
-	--keyColor: #f06998;
+	--keyColor: #ff79c6;
 	width: 100%;
 	height: 100%;
 	background: #282a36;
@@ -35,53 +35,114 @@ div#app {
 		}
 	}
 
-	.playback-button--small:hover {
-		filter: invert(72%) sepia(39%) saturate(2162%) hue-rotate(288deg)
-			brightness(99%) contrast(107%);
+	.playback-button--small {
+		&.shuffle {
+			&.active {
+				background-image: url(./Assets/shuffle.svg);
+			}
+			&:hover {
+				background-image: url(./Assets/shuffle.svg);
+			}
+		}
+		&.repeat {
+			&.active {
+				background-image: url(./Assets/repeat.svg);
+			}
+			&:hover {
+				background-image: url(./Assets/repeat.svg);
+			}
+		}
+		&.repeatOne {
+			&.active {
+				background-image: url(./Assets/repeatOne.svg);
+			}
+			&:hover {
+				background-image: url(./Assets/repeatOne.svg);
+			}
+		}
+		&.cast {
+			&:hover {
+				background-image: url(./Assets/cast.svg);
+			}
+		}
+		&.queue {
+			&.active {
+				background-image: url(./Assets/queue.svg);
+			}
+			&:hover {
+				background-image: url(./Assets/queue.svg);
+			}
+		}
+		&.lyrics {
+			&.active {
+				background-image: url(./Assets/lyrics.svg);
+			}
+			&:hover {
+				background-image: url(./Assets/lyrics.svg);
+			}
+		}
 	}
 
-	.playback-button:hover {
-		filter: invert(72%) sepia(39%) saturate(2162%) hue-rotate(288deg)
-			brightness(99%) contrast(107%);
+	.playback-button {
+		&.previous {
+			&:hover {
+				background-image: url(./Assets/backward.svg);
+			}
+		}
+		&.pause {
+			&:hover {
+				background-image: url(./Assets/pause.svg);
+			}
+		}
+		&.play {
+			&:hover {
+				background-image: url(./Assets/play.svg);
+			}
+		}
+		&.next {
+			&:hover {
+				background-image: url(./Assets/forward.svg);
+			}
+		}
 	}
 
-	.playback-button.previous {
-		background-size: 100%;
-		background-position: center;
-		height: 50px;
-		width: 50px;
-	}
-
-	.playback-button.pause {
-		background-size: 100%;
-		background-position: center;
-		height: 50px;
-		width: 50px;
-	}
-
-	.playback-button.next {
-		background-size: 100%;
-		background-position: center;
-		height: 50px;
-		width: 50px;
+	.volume-button--small {
+		&.active {
+			/* Because we don't want the muted svg to be #ff79c6 all the time. */
+			&:hover {
+				background-image: url(./Assets/mute.svg);
+			}
+		}
+		&:hover {
+			background-image: url(./Assets/volume.svg);
+		}
 	}
 
 	.md-btn:hover {
 		color: var(--keyColor);
+	}
+	.md-btn.md-btn-primary {
+		background: var(--keyColor);
+		color: white;
 	}
 
 	.app-sidebar-footer {
 		border: 0px;
 	}
 
-	.md-btn.md-btn-primary {
-		background: var(--keyColor);
-		color: white;
-	}
-
 	.app-chrome {
 		.app-chrome-item > .app-mainmenu {
 			background: url(./Assets/logo.svg);
+		}
+
+		.app-chrome-item {
+			&.volume {
+				input[type='range'] {
+					&::-webkit-slider-thumb {
+						background: var(--keyColor);
+					}
+				}
+			}
 		}
 	}
 
@@ -90,7 +151,6 @@ div#app {
 	}
 
 	// Shout out to Amaru8 for the sleek tabs on settings
-
 	.nav.nav-pills.nav-fill {
 		background-color: transparent;
 	}
@@ -129,19 +189,46 @@ div#app {
 	.app-chrome {
 		.app-chrome-item > .window-controls-macos {
 			div.close {
-				background-color: #ff5555;
-				width: 12px;
-				height: 12px;
+				background-image: url('Assets/close.svg') !important;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-color: transparent;
+				width: 18px;
+				height: 18px;
+				box-shadow: none;
+				filter: grayscale(30%);
+
+				&:hover {
+					filter: grayscale(0);
+				}
 			}
 			div.minimize {
-				background-color: #bd93f9;
-				width: 12px;
-				height: 12px;
+				background-image: url('Assets/maxmin.svg') !important;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-color: transparent;
+				width: 22px;
+				height: 22px;
+				box-shadow: none;
+				filter: grayscale(30%);
+
+				&:hover {
+					filter: grayscale(0);
+				}
 			}
 			div.minmax {
-				background-color: #f1fa8c;
-				width: 12px;
-				height: 12px;
+				background-image: url('Assets/minmax.svg') !important;
+				width: 22px;
+				height: 22px;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-color: transparent;
+				box-shadow: none;
+				filter: grayscale(30%);
+
+				&:hover {
+					filter: grayscale(0);
+				}
 			}
 		}
 	}
