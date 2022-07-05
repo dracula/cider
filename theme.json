@@ -1,7 +1,7 @@
 {
-	"name": "Dracula Theme",
-	"description": "Dracula Theme for Cider Music",
-	"version": "1.7.0",
-	"author": "Monochromish",
-	"github_repo": "dracula/cider"
+    "name": "Dracula Theme",
+    "description": "Dracula Theme for Cider Music",
+    "version": "1.8.0",
+    "author": "Monochromish",
+    "github_repo": "dracula/cider"
 }

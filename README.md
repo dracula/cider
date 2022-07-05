@@ -2,7 +2,9 @@
 
 > A dark theme for [Cider](https://cider.sh).
 
-![Screenshot](./Preview.png)
+![Screenshot](./Screenshot.png)
+
+![Screenshot](./Screenshot2.png)
 
 ## Install
 

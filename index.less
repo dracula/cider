@@ -1,19 +1,20 @@
 :root {
-	--keyColor: #ff79c6;
+	--keyColor: #bd93f9;
 	--sidebarColor: #282a36;
+	--sidebarColorDark: #21222c;
 	--sidebarColorMix: #282a36;
 }
 div#app {
-	--color1: #282a36;
-	--color2: #282a36;
+	--color1: var(--sidebarColor);
+	--color2: var(--sidebarColor);
 	--bgColor: transparent;
 	--bgWidth: 0px;
 	--bgHeight: 0px;
 	--chromeHeight: 55px;
-	--keyColor: #ff79c6;
+	--keyColor: #bd93f9;
 	width: 100%;
 	height: 100%;
-	background: #282a36;
+	background: var(--sidebarColor);
 	color: white;
 	user-select: none;
 	margin: 0 auto;
@@ -22,11 +23,7 @@ div#app {
 	background-size: 400% 400%;
 
 	&.simplebg {
-		background: #282a36;
-
-		.app-chrome {
-			z-index: 1;
-		}
+		background: var(--sidebarColor);
 	}
 
 	button:hover {
@@ -35,95 +32,11 @@ div#app {
 		}
 	}
 
-	.playback-button--small {
-		&.shuffle {
-			&.active {
-				background-image: url(./Assets/shuffle.svg);
-			}
-			&:hover {
-				background-image: url(./Assets/shuffle.svg);
-			}
-		}
-		&.repeat {
-			&.active {
-				background-image: url(./Assets/repeat.svg);
-			}
-			&:hover {
-				background-image: url(./Assets/repeat.svg);
-			}
-		}
-		&.repeatOne {
-			&.active {
-				background-image: url(./Assets/repeatOne.svg);
-			}
-			&:hover {
-				background-image: url(./Assets/repeatOne.svg);
-			}
-		}
-		&.cast {
-			&:hover {
-				background-image: url(./Assets/cast.svg);
-			}
-		}
-		&.queue {
-			&.active {
-				background-image: url(./Assets/queue.svg);
-			}
-			&:hover {
-				background-image: url(./Assets/queue.svg);
-			}
-		}
-		&.lyrics {
-			&.active {
-				background-image: url(./Assets/lyrics.svg);
-			}
-			&:hover {
-				background-image: url(./Assets/lyrics.svg);
-			}
-		}
+	.cd-mediaitem-list-item .listitem-content:hover {
+		background: rgba(189, 147, 249, 0.25);
 	}
-
-	.playback-button {
-		&.previous {
-			&:hover {
-				background-image: url(./Assets/backward.svg);
-			}
-		}
-		&.pause {
-			&:hover {
-				background-image: url(./Assets/pause.svg);
-			}
-		}
-		&.play {
-			&:hover {
-				background-image: url(./Assets/play.svg);
-			}
-		}
-		&.next {
-			&:hover {
-				background-image: url(./Assets/forward.svg);
-			}
-		}
-	}
-
-	.volume-button--small {
-		&.active {
-			/* Because we don't want the muted svg to be #ff79c6 all the time. */
-			&:hover {
-				background-image: url(./Assets/mute.svg);
-			}
-		}
-		&:hover {
-			background-image: url(./Assets/volume.svg);
-		}
-	}
-
-	.md-btn:hover {
-		color: var(--keyColor);
-	}
-	.md-btn.md-btn-primary {
-		background: var(--keyColor);
-		color: white;
+	.cd-mediaitem-list-item.mediaitem-selected {
+		background: rgba(189, 147, 249, 0.25);
 	}
 
 	.app-sidebar-footer {
@@ -131,6 +44,9 @@ div#app {
 	}
 
 	.app-chrome {
+		box-shadow: none;
+		background-color: var(--sidebarColorDark);
+
 		.app-chrome-item > .app-mainmenu {
 			background: url(./Assets/logo.svg);
 		}
@@ -138,6 +54,8 @@ div#app {
 		.app-chrome-item {
 			&.volume {
 				input[type='range'] {
+					background: rgba(189, 147, 249, 0.25);
+
 					&::-webkit-slider-thumb {
 						background: var(--keyColor);
 					}
@@ -150,98 +68,28 @@ div#app {
 		background: var(--keyColor);
 	}
 
-	// Shout out to Amaru8 for the sleek tabs on settings
-	.nav.nav-pills.nav-fill {
-		background-color: transparent;
-	}
-	.nav-pills:after {
-		content: none;
-	}
-	.nav-link.active {
-		color: var(--keyColor);
-		box-shadow: none;
-	}
-	.nav-link::after {
-		border-radius: 0;
-		inset-block-end: -5px;
-		inset-inline: 100%;
-		border-bottom: 2px solid var(--keyColor);
-		transition: inset-inline 1s var(--appleEase), display 1s var(--appleEase);
-	}
-	.nav-link:hover {
-		box-shadow: none;
-		color: var(--keyColor);
-		&::after {
-			background: transparent;
-			border-bottom: 2px solid var(--keyColor);
-			inset-inline: 30%;
-			transition: inset-inline 0.5s var(--appleEase);
-		}
-	}
-	.nav-link.active::after {
-		background: transparent;
-		border-bottom: 2px solid var(--keyColor);
-		inset-inline: 10%;
+	.md-btn.md-btn-primary {
+		background: var(--keyColor);
+		color: white;
+		border: 1px solid rgba(189, 147, 249, 0.25);
+		border-top: 1px solid rgba(189, 147, 249, 0.5);
 	}
 }
 
-#app.macosemu {
-	.app-chrome {
-		.app-chrome-item > .window-controls-macos {
-			div.close {
-				background-image: url('Assets/close.svg') !important;
-				background-position: center;
-				background-repeat: no-repeat;
-				background-color: transparent;
-				width: 18px;
-				height: 18px;
-				box-shadow: none;
-				filter: grayscale(30%);
-
-				&:hover {
-					filter: grayscale(0);
-				}
-			}
-			div.minimize {
-				background-image: url('Assets/maxmin.svg') !important;
-				background-position: center;
-				background-repeat: no-repeat;
-				background-color: transparent;
-				width: 22px;
-				height: 22px;
-				box-shadow: none;
-				filter: grayscale(30%);
-
-				&:hover {
-					filter: grayscale(0);
-				}
-			}
-			div.minmax {
-				background-image: url('Assets/minmax.svg') !important;
-				width: 22px;
-				height: 22px;
-				background-position: center;
-				background-repeat: no-repeat;
-				background-color: transparent;
-				box-shadow: none;
-				filter: grayscale(30%);
-
-				&:hover {
-					filter: grayscale(0);
-				}
-			}
-		}
-	}
+#app-sidebar {
+	background: var(--sidebarColorDark);
 }
 
-#app.twopanel
+#app.twopanel {
 	.app-chrome:not(.chrome-bottom)
-	.app-chrome--center
-	.top-nav-group
-	.app-sidebar-item:before {
-	background: var(--keyColor);
-}
+		.app-chrome--center
+		.top-nav-group
+		.app-sidebar-item:before {
+		background: var(--keyColor);
+	}
 
-#app.twopanel .app-chrome.chrome-bottom {
-	background: none !important;
+	.app-chrome.chrome-bottom {
+		background: var(--sidebarColorDark);
+		box-shadow: none !important;
+	}
 }
