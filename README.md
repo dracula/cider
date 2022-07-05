@@ -4,7 +4,7 @@
 
 ![Screenshot](./Screenshot.png)
 
-![Screenshot](./Screenshot2.png)
+![Screenshot](./Preview.png)
 
 ## Install
 
